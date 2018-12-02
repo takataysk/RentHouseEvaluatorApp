@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form action="/predict", method="post">
+        <label for="ekitoho">駅徒歩</label>
+        <input name="ekitoho" id="ekitoho" value="{{ request.form['ekitoho'] }}" required>分<br>
+
+        <label for="madori">間取り</label>
+        <input name="madori" id="body" value="{{ request.form['madori'] }}" required><br>
+        
+        <label for="moyori">最寄駅</label>
+        <select name="moyori" id="moyori" value="{{ request.form['moyori'] }}" >
+            <option value="umeda">梅田駅</option>
+            <option value="nakatsu">中津駅</option>
+            <option value="juso">十三駅</option>
+            <option value="kanzakigawa">神崎川駅</option>
+            <option value="sonoda">園田駅</option>
+            <option value="tsukaguchi">塚口駅</option>
+            <option value="mukonoso">武庫之荘駅</option>
+            <option value="nishikita">西宮北口駅</option>
+            <option value="shukugawa">夙川駅</option>
+            <option value="ashiyagawa">芦屋川駅</option>
+            <option value="okamoto">岡本駅</option>
+            <option value="mikage">御影駅</option>
+            <option value="rokko">六甲駅</option>
+            <option value="ojikoen">王子公園駅</option>
+            <option value="kasuganomichi">春日野道駅</option>
+            <option value="kobe">神戸三宮駅</option>
+        </select></br>
+        
+        <label for="chikunen">築年数</label>
+        <input name="chikunen" id="chikunen" value="{{ request.form['chikunen'] }}" required>年<br>
+
+        <label for="kai">階数</label>
+        <input name="kai" id="kai" value="{{ request.form['kai'] }}" required>階<br>
+
+        <label for="yachin">家賃</label>
+        <input name="yachin" id="yachin" value="{{ request.form['yachin'] }}" >円<br>
+
+        <label for="kanrihi">管理費</label>
+        <input name="kanrihi" id="kanrihi" value="{{ request.form['kanrihi'] }}" >円<br>
+
+        <label for="shikikin">敷金</label>
+        <input name="shikikin" id="shikikin" value="{{ request.form['shikikin'] }}" >円<br>
+
+        <label for="reikin">礼金</label>
+        <input name="reikin" id="reikin" value="{{ request.form['reikin'] }}" >円<br>
+
+        <input type="submit" value="予測">
+    </form>
+{% endblock %}

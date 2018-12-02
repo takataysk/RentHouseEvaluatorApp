@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <p>2年間のトータルコスト</p>
+    <p>↓</p>
+    <p>↓</p>
+    <p>↓</p>
+    <p>予想価格 : {{ post.predict }}</p>
+    <p>実際価格 : {{ post.answer }}</p>
+    <form>
+        <INPUT type="button" onClick='history.back();' value="戻る">
+    </form>
+{% endblock %}
