@@ -20,7 +20,7 @@
         ランダムフォレスト回帰で家賃予想を行う
         ※2年間のランニングコストを予想する
  
- 3. modelをWebアプリにする
+ 3. modelをFLASKで使用する
  ```
  $export FLASK_APP=webapp
  
